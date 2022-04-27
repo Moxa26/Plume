@@ -1,0 +1,361 @@
+Customer Name,CSP Size,Region,Channel,Product,TCV,ACV,Close Date,Month
+A,S1,US & CA,Channel,HomePass,600000,200000,3/1/21,March 2021
+A,S1,US & CA,Channel,WorkPass,120000,40000,3/1/21,March 2021
+A,S1,US & CA,Channel,Haystack,600000,200000,3/1/21,March 2021
+B,S2,US & CA,Direct,Haystack,1000000,500000,3/1/22,March 2022
+C,S3,APAC,Direct,HomePass,2000000,1000000,4/1/20,April 2021
+C,S3,APAC,Direct,Haystack,1000000,500000,4/1/20,April 2021
+D,M4,GCC,Direct,HomePass,1000000,250000,4/1/20,April 2021
+D,M4,GCC,Direct,Haystack,1500000,375000,4/1/20,April 2021
+E,L5,US & CA,Direct,Haystack,6000000,2000000,9/1/20,September 2020
+E,L5,US & CA,Direct,Hardware,600000,200000,9/1/20,September 2020
+F,S1,US & CA,Channel,HomePass,120000,40000,9/1/21,September 2021
+F,S1,US & CA,Channel,WorkPass,600000,200000,9/1/21,September 2021
+F,S1,US & CA,Channel,Haystack,1000000,500000,9/1/21,September 2021
+G,S2,US & CA,Direct,Haystack,2000000,1000000,1/1/19,January 2019
+G,S3,APAC,Direct,HomePass,1000000,500000,1/1/19,January 2019
+G,S3,APAC,Direct,Haystack,1000000,250000,1/1/19,January 2019
+H,S1,US & CA,Channel,HomePass,1500000,375000,9/1/20,September 2020
+H,S1,US & CA,Channel,WorkPass,6000000,2000000,9/1/20,September 2020
+H,S1,US & CA,Channel,Haystack,600000,200000,9/1/20,September 2020
+J,S2,US & CA,Direct,Haystack,1000000,500000,3/1/21,March 2021
+K,S3,APAC,Direct,HomePass,2000000,1000000,10/1/18,October 2018
+K,S3,APAC,Direct,Haystack,1000000,500000,10/1/18,October 2018
+L,M4,APAC,Direct,HomePass,1000000,250000,6/1/19,June 2019
+L,M4,APAC,Direct,Haystack,1500000,375000,6/1/19,June 2019
+M,L5,US & CA,Direct,Haystack,6000000,2000000,5/1/20,May 2020
+M,L5,US & CA,Direct,Hardware,600000,200000,5/1/20,May 2020
+M,S1,US & CA,Channel,HomePass,1000000,500000,5/1/20,May 2020
+M,S1,US & CA,Channel,WorkPass,2000000,1000000,5/1/20,May 2020
+M,S1,US & CA,Channel,Haystack,1000000,500000,5/1/20,May 2020
+N,S2,US & CA,Direct,Haystack,600000,200000,12/1/20,December 2020
+N,S3,APAC,Direct,HomePass,120000,40000,12/1/20,December 2020
+N,S3,APAC,Direct,Haystack,600000,200000,12/1/20,December 2020
+O,S1,LATAM,Channel,HomePass,1000000,500000,5/1/19,May 2019
+O,S1,LATAM,Channel,WorkPass,2000000,1000000,5/1/19,May 2019
+O,S1,LATAM,Channel,Haystack,1000000,500000,5/1/19,May 2019
+P,S2,LATAM,Direct,Haystack,1000000,250000,5/1/19,May 2019
+Q,S3,APAC,Direct,HomePass,1500000,375000,5/1/19,May 2019
+Q,S3,APAC,Direct,Haystack,6000000,2000000,5/1/19,May 2019
+R,M4,US & CA,Direct,HomePass,600000,200000,5/1/19,May 2019
+R,M4,US & CA,Direct,Haystack,120000,40000,5/1/19,May 2019
+S,L5,US & CA,Direct,Haystack,600000,200000,5/1/19,May 2019
+S,L5,US & CA,Direct,Hardware,1000000,500000,5/1/19,May 2019
+T,S1,US & CA,Channel,HomePass,2000000,1000000,5/1/19,May 2019
+T,S1,US & CA,Channel,WorkPass,1000000,500000,5/1/19,May 2019
+T,S1,US & CA,Channel,Haystack,1000000,250000,5/1/19,May 2019
+U,S2,US & CA,Direct,Haystack,1500000,375000,5/1/19,May 2019
+V,S3,LATAM,Direct,HomePass,6000000,2000000,5/1/19,May 2019
+V,S3,LATAM,Direct,Haystack,600000,200000,5/1/19,May 2019
+W,S1,EU & Africa,Channel,HomePass,1000000,500000,5/1/19,May 2019
+W,S1,EU & Africa,Channel,WorkPass,2000000,1000000,5/1/19,May 2019
+W,S1,EU & Africa,Channel,Haystack,1000000,500000,5/1/19,May 2019
+X,S2,EU & Africa,Direct,Haystack,1000000,250000,5/1/19,May 2019
+Y,S3,EU & Africa,Direct,HomePass,1500000,375000,5/1/19,May 2019
+Y,S3,EU & Africa,Direct,Haystack,6000000,2000000,5/1/19,May 2019
+Z,M4,EU & Africa,Direct,HomePass,600000,200000,5/1/19,May 2019
+Z,M4,EU & Africa,Direct,Haystack,1000000,500000,5/1/19,May 2019
+AA,L5,EU & Africa,Direct,Haystack,2000000,1000000,3/1/21,March 2021
+AA,L5,EU & Africa,Direct,Hardware,1000000,500000,3/1/21,March 2021
+AB,S1,EU & Africa,Channel,HomePass,600000,200000,1/1/21,January 2021
+AB,S1,EU & Africa,Channel,WorkPass,120000,40000,1/1/21,January 2021
+AB,S1,EU & Africa,Channel,Haystack,600000,200000,1/1/21,January 2021
+AC,S2,EU & Africa,Direct,Haystack,1000000,500000,4/1/20,April 2021
+AD,S3,EU & Africa,Direct,HomePass,2000000,1000000,10/1/19,October 2019
+AD,S3,EU & Africa,Direct,Haystack,1000000,500000,10/1/19,October 2019
+AE,S1,US & CA,Channel,HomePass,1000000,250000,1/1/19,January 2019
+AE,S1,US & CA,Channel,WorkPass,1500000,375000,1/1/19,January 2019
+AE,S1,US & CA,Channel,Haystack,6000000,2000000,1/1/19,January 2019
+AF,S2,US & CA,Direct,Haystack,600000,200000,9/1/20,September 2020
+AG,S3,US & CA,Direct,HomePass,120000,40000,4/1/21,April 2021
+AG,S3,US & CA,Direct,Haystack,600000,200000,4/1/21,April 2021
+AH,M4,US & CA,Direct,HomePass,1000000,500000,10/1/18,October 2018
+AH,M4,US & CA,Direct,Haystack,2000000,1000000,10/1/18,October 2018
+AI,L5,US & CA,Direct,Haystack,1000000,500000,8/1/20,August 2020
+AI,L5,US & CA,Direct,Hardware,1000000,250000,8/1/20,August 2020
+AJ,S1,US & CA,Channel,HomePass,1500000,375000,5/1/21,May 2021
+AJ,S1,US & CA,Channel,WorkPass,6000000,2000000,5/1/21,May 2021
+AJ,S1,US & CA,Channel,Haystack,600000,200000,5/1/21,May 2021
+AL,S2,US & CA,Direct,Haystack,1000000,500000,2/1/19,February 2019
+AK,S3,LATAM,Direct,HomePass,2000000,1000000,11/1/20,November 2020
+AK,S3,LATAM,Direct,Haystack,1000000,500000,11/1/20,November 2020
+AM,S1,US & CA,Channel,HomePass,1000000,250000,2/1/19,February 2019
+AM,S1,US & CA,Channel,WorkPass,1500000,375000,2/1/19,February 2019
+AM,S1,US & CA,Channel,Haystack,6000000,2000000,2/1/19,February 2019
+AN,S2,US & CA,Channel,Haystack,600000,200000,3/1/19,March 2019
+AP,S3,US & CA,Channel,HomePass,1000000,500000,7/1/19,July 2019
+AQ,S3,US & CA,Channel,Haystack,2000000,1000000,1/1/22,January 2022
+AR,M4,US & CA,Channel,HomePass,1000000,500000,10/1/19,October 2019
+AR,M4,US & CA,Channel,Haystack,600000,200000,10/1/19,October 2019
+AS,S1,US & CA,Channel,Haystack,120000,40000,11/1/19,November 2019
+AS,S1,US & CA,Channel,Hardware,600000,200000,11/1/19,November 2019
+AS,S1,US & CA,Channel,HomePass,1000000,500000,11/1/19,November 2019
+AY,S1,US & CA,Channel,WorkPass,2000000,1000000,11/1/21,November 2021
+AY,S1,US & CA,Channel,Haystack,1000000,500000,11/1/21,November 2021
+AT,S2,US & CA,Channel,Haystack,1000000,250000,11/1/20,November 2020
+AT,S3,US & CA,Channel,HomePass,1500000,375000,11/1/20,November 2020
+AT,S3,US & CA,Channel,Haystack,6000000,2000000,11/1/20,November 2020
+AU,S1,US & CA,Channel,HomePass,600000,200000,9/1/21,September 2021
+AU,S1,US & CA,Channel,WorkPass,120000,40000,9/1/21,September 2021
+AU,S1,US & CA,Channel,Haystack,600000,200000,9/1/21,September 2021
+AV,S2,US & CA,Channel,Haystack,1000000,500000,8/1/19,August 2019
+AV,S3,US & CA,Channel,HomePass,2000000,1000000,8/1/19,August 2019
+AV,S3,US & CA,Channel,Haystack,1000000,500000,8/1/19,August 2019
+AW,S2,US & CA,Channel,HomePass,1000000,250000,1/1/20,January 2020
+AW,S2,US & CA,Channel,Haystack,1500000,375000,1/1/20,January 2020
+AX,S1,US & CA,Channel,Haystack,6000000,2000000,7/1/19,July 2019
+AX,S1,US & CA,Channel,Hardware,600000,200000,7/1/19,July 2019
+AZ,S1,US & CA,Channel,HomePass,1000000,500000,11/1/21,November 2021
+AZ,S1,US & CA,Channel,WorkPass,2000000,1000000,11/1/21,November 2021
+AZ,S1,US & CA,Channel,Haystack,1000000,500000,11/1/21,November 2021
+BA,S2,US & CA,Channel,Haystack,1000000,250000,3/1/22,March 2022
+BB,S3,US & CA,Channel,HomePass,1500000,375000,7/1/20,July 2020
+BB,S3,US & CA,Channel,Haystack,6000000,2000000,7/1/20,July 2020
+A1,S1,US & CA,Channel,HomePass,600000,200000,3/1/21,March 2021
+A1,S1,US & CA,Channel,WorkPass,1000000,500000,3/1/21,March 2021
+A1,S1,US & CA,Channel,Haystack,2000000,1000000,3/1/21,March 2021
+B1,S2,US & CA,Direct,Haystack,1000000,500000,3/1/22,March 2022
+C1,S3,APAC,Direct,HomePass,600000,200000,4/1/20,April 2021
+C1,S3,APAC,Direct,Haystack,120000,40000,4/1/20,April 2021
+D1,M4,GCC,Direct,HomePass,600000,200000,4/1/20,April 2021
+D1,M4,GCC,Direct,Haystack,1000000,500000,4/1/20,April 2021
+E1,L5,US & CA,Direct,Haystack,2000000,1000000,9/1/20,September 2020
+E1,L5,US & CA,Direct,Hardware,1000000,500000,9/1/20,September 2020
+F1,S1,US & CA,Channel,HomePass,1000000,250000,9/1/21,September 2021
+F1,S1,US & CA,Channel,WorkPass,1500000,375000,9/1/21,September 2021
+F1,S1,US & CA,Channel,Haystack,6000000,2000000,9/1/21,September 2021
+G1,S2,US & CA,Direct,Haystack,600000,200000,1/1/19,January 2019
+G1,S3,APAC,Direct,HomePass,120000,40000,1/1/19,January 2019
+G1,S3,APAC,Direct,Haystack,600000,200000,1/1/19,January 2019
+H1,S1,US & CA,Channel,HomePass,1000000,500000,9/1/20,September 2020
+H1,S1,US & CA,Channel,WorkPass,2000000,1000000,9/1/20,September 2020
+H1,S1,US & CA,Channel,Haystack,1000000,500000,9/1/20,September 2020
+J1,S2,US & CA,Direct,Haystack,1000000,250000,3/1/21,March 2021
+K1,S3,APAC,Direct,HomePass,1500000,375000,10/1/18,October 2018
+K1,S3,APAC,Direct,Haystack,6000000,2000000,10/1/18,October 2018
+L1,M4,APAC,Direct,HomePass,600000,200000,6/1/19,June 2019
+L1,M4,APAC,Direct,Haystack,1000000,500000,6/1/19,June 2019
+M1,L5,US & CA,Direct,Haystack,2000000,1000000,5/1/20,May 2020
+M1,L5,US & CA,Direct,Hardware,1000000,500000,5/1/20,May 2020
+M1,S1,US & CA,Channel,HomePass,1000000,250000,5/1/20,May 2020
+M1,S1,US & CA,Channel,WorkPass,1500000,375000,5/1/20,May 2020
+M1,S1,US & CA,Channel,Haystack,6000000,2000000,5/1/20,May 2020
+N1,S2,US & CA,Direct,Haystack,600000,200000,12/1/20,December 2020
+N1,S3,APAC,Direct,HomePass,1000000,500000,12/1/20,December 2020
+N1,S3,APAC,Direct,Haystack,2000000,1000000,12/1/20,December 2020
+O1,S1,US & CA,Channel,HomePass,1000000,500000,5/1/19,May 2019
+O1,S1,US & CA,Channel,WorkPass,600000,200000,5/1/19,May 2019
+O1,S1,US & CA,Channel,Haystack,120000,40000,5/1/19,May 2019
+P1,S2,US & CA,Direct,Haystack,600000,200000,5/1/19,May 2019
+Q1,S3,APAC,Direct,HomePass,1000000,500000,5/1/19,May 2019
+Q1,S3,APAC,Direct,Haystack,2000000,1000000,5/1/19,May 2019
+R1,M4,US & CA,Direct,HomePass,1000000,500000,5/1/19,May 2019
+R1,M4,US & CA,Direct,Haystack,1000000,250000,5/1/19,May 2019
+S1,L5,US & CA,Direct,Haystack,1500000,375000,5/1/19,May 2019
+S1,L5,US & CA,Direct,Hardware,6000000,2000000,5/1/19,May 2019
+T1,S1,US & CA,Channel,HomePass,600000,200000,5/1/19,May 2019
+T1,S1,US & CA,Channel,WorkPass,120000,40000,5/1/19,May 2019
+T1,S1,US & CA,Channel,Haystack,600000,200000,5/1/19,May 2019
+U1,S2,US & CA,Direct,Haystack,1000000,500000,5/1/19,May 2019
+V1,S3,APAC,Direct,HomePass,2000000,1000000,5/1/19,May 2019
+V1,S3,APAC,Direct,Haystack,1000000,500000,5/1/19,May 2019
+W1,S1,EU & Africa,Channel,HomePass,1000000,250000,5/1/19,May 2019
+W1,S1,EU & Africa,Channel,WorkPass,1500000,375000,5/1/19,May 2019
+W1,S1,EU & Africa,Channel,Haystack,6000000,2000000,5/1/19,May 2019
+X1,S2,EU & Africa,Direct,Haystack,600000,200000,5/1/19,May 2019
+Y1,S3,EU & Africa,Direct,HomePass,1000000,500000,5/1/19,May 2019
+Y1,S3,EU & Africa,Direct,Haystack,2000000,1000000,5/1/19,May 2019
+Z1,M4,EU & Africa,Direct,HomePass,1000000,500000,5/1/19,May 2019
+Z1,M4,EU & Africa,Direct,Haystack,1000000,250000,5/1/19,May 2019
+AA1,L5,EU & Africa,Direct,Haystack,1500000,375000,1/1/21,January 2021
+AA1,L5,EU & Africa,Direct,Hardware,6000000,2000000,1/1/21,January 2021
+AB1,S1,EU & Africa,Channel,HomePass,600000,200000,4/1/20,April 2021
+AB1,S1,EU & Africa,Channel,WorkPass,1000000,500000,4/1/20,April 2021
+AB1,S1,EU & Africa,Channel,Haystack,2000000,1000000,4/1/20,April 2021
+AC1,S2,EU & Africa,Direct,Haystack,1000000,500000,10/1/19,October 2019
+AD1,S3,EU & Africa,Direct,HomePass,600000,200000,1/1/19,January 2019
+AD1,S3,EU & Africa,Direct,Haystack,120000,40000,1/1/19,January 2019
+AE1,S1,US & CA,Channel,HomePass,600000,200000,9/1/20,September 2020
+AE1,S1,US & CA,Channel,WorkPass,1000000,500000,9/1/20,September 2020
+AE1,S1,US & CA,Channel,Haystack,2000000,1000000,9/1/20,September 2020
+AF1,S2,US & CA,Direct,Haystack,1000000,500000,4/1/21,April 2021
+AG1,S3,US & CA,Direct,HomePass,1000000,250000,10/1/18,October 2018
+AG1,S3,US & CA,Direct,Haystack,1500000,375000,10/1/18,October 2018
+AH1,M4,US & CA,Direct,HomePass,6000000,2000000,8/1/20,August 2020
+AH1,M4,US & CA,Direct,Haystack,600000,200000,8/1/20,August 2020
+AI1,L5,US & CA,Direct,Haystack,120000,40000,5/1/21,May 2021
+AI1,L5,US & CA,Direct,Hardware,600000,200000,5/1/21,May 2021
+AJ1,S1,US & CA,Channel,HomePass,1000000,500000,11/1/20,November 2020
+AJ1,S1,US & CA,Channel,WorkPass,2000000,1000000,11/1/20,November 2020
+AJ1,S1,US & CA,Channel,Haystack,1000000,500000,11/1/20,November 2020
+AL1,S2,US & CA,Direct,Haystack,1000000,250000,2/1/19,February 2019
+AK1,S3,US & CA,Direct,HomePass,1500000,375000,2/1/19,February 2019
+AK1,S3,US & CA,Direct,Haystack,6000000,2000000,2/1/19,February 2019
+AM1,S1,US & CA,Channel,HomePass,600000,200000,3/1/19,March 2019
+AM1,S1,US & CA,Channel,WorkPass,1000000,500000,3/1/19,March 2019
+AM1,S1,US & CA,Channel,Haystack,2000000,1000000,3/1/19,March 2019
+AN1,S2,US & CA,Channel,Haystack,1000000,500000,7/1/19,July 2019
+AP1,S3,US & CA,Channel,HomePass,1000000,250000,1/1/22,January 2022
+AQ1,S3,US & CA,Channel,Haystack,1500000,375000,10/1/19,October 2019
+AR1,M4,US & CA,Channel,HomePass,6000000,2000000,11/1/19,November 2019
+AR1,M4,US & CA,Channel,Haystack,600000,200000,11/1/19,November 2019
+AS1,S1,US & CA,Channel,Haystack,1000000,500000,11/1/20,November 2020
+AS1,S1,US & CA,Channel,Hardware,2000000,1000000,11/1/20,November 2020
+AS1,S1,US & CA,Channel,HomePass,1000000,500000,11/1/20,November 2020
+AY1,S1,US & CA,Channel,WorkPass,600000,200000,11/1/21,November 2021
+AY1,S1,US & CA,Channel,Haystack,120000,40000,11/1/21,November 2021
+AT1,S2,US & CA,Channel,Haystack,600000,200000,9/1/21,September 2021
+AT1,S3,US & CA,Channel,HomePass,1000000,500000,9/1/21,September 2021
+AT1,S3,US & CA,Channel,Haystack,2000000,1000000,9/1/21,September 2021
+AU1,S1,US & CA,Channel,HomePass,1000000,500000,8/1/19,August 2019
+AU1,S1,US & CA,Channel,WorkPass,1000000,250000,8/1/19,August 2019
+AU1,S1,US & CA,Channel,Haystack,1500000,375000,8/1/19,August 2019
+AV1,S2,US & CA,Channel,Haystack,6000000,2000000,1/1/20,January 2020
+AV1,S3,US & CA,Channel,HomePass,600000,200000,1/1/20,January 2020
+AV1,S3,US & CA,Channel,Haystack,120000,40000,1/1/20,January 2020
+AW1,S2,US & CA,Channel,HomePass,600000,200000,7/1/19,July 2019
+AW1,S2,US & CA,Channel,Haystack,1000000,500000,7/1/19,July 2019
+AX1,S1,US & CA,Channel,Haystack,2000000,1000000,11/1/21,November 2021
+AX1,S1,US & CA,Channel,Hardware,1000000,500000,11/1/21,November 2021
+AZ1,S1,US & CA,Channel,HomePass,1000000,250000,3/1/22,March 2022
+AZ1,S1,US & CA,Channel,WorkPass,1500000,375000,3/1/22,March 2022
+AZ1,S1,US & CA,Channel,Haystack,6000000,2000000,3/1/22,March 2022
+BA1,S2,US & CA,Channel,Haystack,600000,200000,7/1/20,July 2020
+BB1,S3,US & CA,Channel,HomePass,1000000,500000,3/1/20,March 2020
+BB1,S3,US & CA,Channel,Haystack,2000000,1000000,3/1/20,March 2020
+A12,S1,US & CA,Channel,HomePass,1000000,500000,3/1/21,March 2021
+A12,S1,US & CA,Channel,WorkPass,1000000,250000,3/1/21,March 2021
+A12,S1,US & CA,Channel,Haystack,1500000,375000,3/1/21,March 2021
+B12,S2,US & CA,Direct,Haystack,6000000,2000000,3/1/22,March 2022
+C12,S3,APAC,Direct,HomePass,600000,200000,4/1/20,April 2021
+C12,S3,APAC,Direct,Haystack,1000000,500000,4/1/20,April 2021
+D12,M4,GCC,Direct,HomePass,2000000,1000000,9/1/20,September 2020
+D12,M4,GCC,Direct,Haystack,1000000,500000,9/1/20,September 2020
+E12,L5,US & CA,Direct,Haystack,600000,200000,9/1/21,September 2021
+E12,L5,US & CA,Direct,Hardware,120000,40000,9/1/21,September 2021
+F12,S1,US & CA,Channel,HomePass,600000,200000,1/1/19,January 2019
+F12,S1,US & CA,Channel,WorkPass,1000000,500000,1/1/19,January 2019
+F12,S1,US & CA,Channel,Haystack,2000000,1000000,1/1/19,January 2019
+G12,S2,US & CA,Direct,Haystack,1000000,500000,9/1/20,September 2020
+G12,S3,APAC,Direct,HomePass,1000000,250000,9/1/20,September 2020
+G12,S3,APAC,Direct,Haystack,1500000,375000,9/1/20,September 2020
+H12,S1,US & CA,Channel,HomePass,6000000,2000000,3/1/21,March 2021
+H12,S1,US & CA,Channel,WorkPass,600000,200000,3/1/21,March 2021
+H12,S1,US & CA,Channel,Haystack,120000,40000,3/1/21,March 2021
+J12,S2,US & CA,Direct,Haystack,600000,200000,10/1/18,October 2018
+K12,S3,APAC,Direct,HomePass,1000000,500000,6/1/19,June 2019
+K12,S3,APAC,Direct,Haystack,2000000,1000000,6/1/19,June 2019
+L12,M4,APAC,Direct,HomePass,1000000,500000,5/1/20,May 2020
+L12,M4,APAC,Direct,Haystack,1000000,250000,5/1/20,May 2020
+M12,L5,US & CA,Direct,Haystack,1500000,375000,12/1/20,December 2020
+M12,L5,US & CA,Direct,Hardware,6000000,2000000,12/1/20,December 2020
+M12,S1,US & CA,Channel,HomePass,600000,200000,12/1/20,December 2020
+M12,S1,US & CA,Channel,WorkPass,1000000,500000,12/1/20,December 2020
+M12,S1,US & CA,Channel,Haystack,2000000,1000000,12/1/20,December 2020
+N12,S2,US & CA,Direct,Haystack,1000000,500000,4/1/21,April 2021
+N12,S3,APAC,Direct,HomePass,1000000,250000,4/1/21,April 2021
+N12,S3,APAC,Direct,Haystack,1500000,375000,4/1/21,April 2021
+O12,S1,US & CA,Channel,HomePass,6000000,2000000,5/1/19,May 2019
+O12,S1,US & CA,Channel,WorkPass,600000,200000,5/1/19,May 2019
+O12,S1,US & CA,Channel,Haystack,1000000,500000,5/1/19,May 2019
+P12,S2,US & CA,Direct,Haystack,2000000,1000000,5/1/19,May 2019
+Q12,S3,APAC,Direct,HomePass,1000000,500000,5/1/19,May 2019
+Q12,S3,APAC,Direct,Haystack,600000,200000,5/1/19,May 2019
+R12,M4,US & CA,Direct,HomePass,120000,40000,5/1/19,May 2019
+R12,M4,US & CA,Direct,Haystack,600000,200000,5/1/19,May 2019
+S12,L5,US & CA,Direct,Haystack,1000000,500000,5/1/19,May 2019
+S12,L5,US & CA,Direct,Hardware,2000000,1000000,5/1/19,May 2019
+T12,S1,US & CA,Channel,HomePass,1000000,500000,5/1/19,May 2019
+T12,S1,US & CA,Channel,WorkPass,1000000,250000,5/1/19,May 2019
+T12,S1,US & CA,Channel,Haystack,1500000,375000,5/1/19,May 2019
+U12,S2,US & CA,Direct,Haystack,6000000,2000000,5/1/19,May 2019
+V12,S3,APAC,Direct,HomePass,600000,200000,5/1/19,May 2019
+V12,S3,APAC,Direct,Haystack,120000,40000,5/1/19,May 2019
+W12,S1,EU & Africa,Channel,HomePass,600000,200000,5/1/19,May 2019
+W12,S1,EU & Africa,Channel,WorkPass,1000000,500000,5/1/19,May 2019
+W12,S1,EU & Africa,Channel,Haystack,2000000,1000000,5/1/19,May 2019
+X12,S2,EU & Africa,Direct,Haystack,1000000,500000,5/1/19,May 2019
+Y12,S3,EU & Africa,Direct,HomePass,1000000,250000,5/1/19,May 2019
+Y12,S3,EU & Africa,Direct,Haystack,1500000,375000,5/1/19,May 2019
+Z12,M4,EU & Africa,Direct,HomePass,6000000,2000000,5/1/19,May 2019
+Z12,M4,EU & Africa,Direct,Haystack,600000,200000,5/1/19,May 2019
+AA12,L5,EU & Africa,Direct,Haystack,1000000,500000,1/1/21,January 2021
+AA12,L5,EU & Africa,Direct,Hardware,2000000,1000000,1/1/21,January 2021
+AB12,S1,EU & Africa,Channel,HomePass,1000000,500000,4/1/20,April 2021
+AB12,S1,EU & Africa,Channel,WorkPass,1000000,250000,4/1/20,April 2021
+AB12,S1,EU & Africa,Channel,Haystack,1500000,375000,4/1/20,April 2021
+AC12,S2,EU & Africa,Direct,Haystack,6000000,2000000,10/1/19,October 2019
+AD12,S3,EU & Africa,Direct,HomePass,600000,200000,1/1/19,January 2019
+AD12,S3,EU & Africa,Direct,Haystack,1000000,500000,1/1/19,January 2019
+AE12,S1,US & CA,Channel,HomePass,2000000,1000000,9/1/20,September 2020
+AE12,S1,US & CA,Channel,WorkPass,1000000,500000,9/1/20,September 2020
+AE12,S1,US & CA,Channel,Haystack,600000,200000,9/1/20,September 2020
+AF12,S2,US & CA,Direct,Haystack,120000,40000,4/1/21,April 2021
+AG12,S3,US & CA,Direct,HomePass,600000,200000,10/1/18,October 2018
+AG12,S3,US & CA,Direct,Haystack,1000000,500000,10/1/18,October 2018
+AH12,M4,US & CA,Direct,HomePass,2000000,1000000,8/1/20,August 2020
+AH12,M4,US & CA,Direct,Haystack,1000000,500000,8/1/20,August 2020
+AI12,L5,US & CA,Direct,Haystack,1000000,250000,5/1/21,May 2021
+AI12,L5,US & CA,Direct,Hardware,1500000,375000,5/1/21,May 2021
+AJ12,S1,US & CA,Channel,HomePass,6000000,2000000,11/1/20,November 2020
+AJ12,S1,US & CA,Channel,WorkPass,600000,200000,11/1/20,November 2020
+AJ12,S1,US & CA,Channel,Haystack,120000,40000,11/1/20,November 2020
+AL12,S2,US & CA,Direct,Haystack,600000,200000,2/1/19,February 2019
+AK12,S3,US & CA,Direct,HomePass,1000000,500000,2/1/19,February 2019
+AK12,S3,US & CA,Direct,Haystack,2000000,1000000,2/1/19,February 2019
+AM12,S1,US & CA,Channel,HomePass,1000000,500000,3/1/19,March 2019
+AM12,S1,US & CA,Channel,WorkPass,1000000,250000,3/1/19,March 2019
+AM12,S1,US & CA,Channel,Haystack,1500000,375000,3/1/19,March 2019
+AN12,S2,US & CA,Channel,Haystack,6000000,2000000,7/1/19,July 2019
+AP12,S3,US & CA,Channel,HomePass,600000,200000,1/1/22,January 2022
+AQ12,S3,US & CA,Channel,Haystack,1000000,500000,10/1/19,October 2019
+AR12,L5,US & CA,Channel,HomePass,2000000,1000000,11/1/19,November 2019
+AR12,L5,US & CA,Channel,Haystack,1000000,500000,11/1/19,November 2019
+AS12,S1,US & CA,Channel,Haystack,1000000,250000,11/1/20,November 2020
+AS12,S1,US & CA,Channel,Hardware,1500000,375000,11/1/20,November 2020
+AS12,S1,US & CA,Channel,HomePass,6000000,2000000,11/1/20,November 2020
+AY12,S1,US & CA,Channel,WorkPass,600000,200000,11/1/21,November 2021
+AY12,S1,US & CA,Channel,Haystack,1000000,500000,11/1/21,November 2021
+AT12,S2,US & CA,Channel,Haystack,2000000,1000000,9/1/21,September 2021
+AT12,S3,US & CA,Channel,HomePass,1000000,500000,9/1/21,September 2021
+AT12,S3,US & CA,Channel,Haystack,600000,200000,9/1/21,September 2021
+AU12,S1,US & CA,Channel,HomePass,120000,40000,8/1/19,August 2019
+AU12,S1,US & CA,Channel,WorkPass,600000,200000,8/1/19,August 2019
+AU12,S1,US & CA,Channel,Haystack,1000000,500000,8/1/19,August 2019
+AV12,S2,US & CA,Channel,Haystack,2000000,1000000,1/1/20,January 2020
+AV12,S3,US & CA,Channel,HomePass,1000000,500000,1/1/20,January 2020
+AV12,S3,US & CA,Channel,Haystack,1000000,250000,1/1/20,January 2020
+AW12,S2,US & CA,Channel,HomePass,1500000,375000,7/1/19,July 2019
+AW12,S2,US & CA,Channel,Haystack,6000000,2000000,7/1/19,July 2019
+AX12,S1,US & CA,Channel,Haystack,600000,200000,11/1/21,November 2021
+AX12,S1,US & CA,Channel,Hardware,120000,40000,11/1/21,November 2021
+AZ12,S1,US & CA,Channel,HomePass,600000,200000,3/1/22,March 2022
+AZ12,S1,US & CA,Channel,WorkPass,1000000,500000,3/1/22,March 2022
+AZ12,S1,US & CA,Channel,Haystack,2000000,1000000,3/1/22,March 2022
+BA12,S2,US & CA,Channel,Haystack,1000000,500000,7/1/20,July 2020
+BB12,S3,US & CA,Channel,HomePass,1000000,250000,4/1/20,April 2021
+BB12,S3,US & CA,Channel,Haystack,1500000,375000,4/1/20,April 2021
+AS12,S1,EU & Africa,Channel,Haystack,6000000,2000000,11/1/20,November 2020
+AS12,S1,US & CA,Channel,Hardware,600000,200000,11/1/20,November 2020
+AS12,S1,US & CA,Channel,HomePass,1000000,500000,11/1/20,November 2020
+AY12,S1,US & CA,Channel,WorkPass,2000000,1000000,11/1/21,November 2021
+AY12,S1,US & CA,Channel,Haystack,1000000,500000,11/1/21,November 2021
+AT12,S2,US & CA,Channel,Haystack,1000000,250000,9/1/21,September 2021
+AT12,S3,US & CA,Channel,HomePass,1500000,375000,9/1/21,September 2021
+AT12,S3,US & CA,Channel,Haystack,6000000,2000000,9/1/21,September 2021
+AU12,S1,US & CA,Channel,HomePass,600000,200000,8/1/19,August 2019
+AU12,S1,US & CA,Channel,WorkPass,1000000,500000,8/1/19,August 2019
+AU12,S1,US & CA,Channel,Haystack,2000000,1000000,8/1/19,August 2019
+AV12,S2,US & CA,Channel,Haystack,1000000,500000,1/1/20,January 2020
+AV12,S3,US & CA,Channel,HomePass,600000,200000,1/1/20,January 2020
+AV12,S3,US & CA,Channel,Haystack,120000,40000,1/1/20,January 2020
+AW12,S2,US & CA,Channel,HomePass,600000,200000,7/1/19,July 2019
+AW12,S2,US & CA,Channel,Haystack,1000000,500000,7/1/19,July 2019
+AX12,S1,US & CA,Channel,Haystack,2000000,1000000,11/1/21,November 2021
+AX12,S1,US & CA,Channel,Hardware,1000000,500000,11/1/21,November 2021
+AZ12,S1,US & CA,Channel,HomePass,1000000,250000,3/1/22,March 2022
+AZ12,S1,US & CA,Channel,WorkPass,1500000,375000,3/1/22,March 2022
+AZ12,S1,US & CA,Channel,Haystack,6000000,2000000,3/1/22,March 2022
+BA12,S2,US & CA,Channel,Haystack,600000,200000,7/1/20,July 2020
+BB12,S3,US & CA,Channel,HomePass,120000,40000,4/1/20,April 2021
+BB12,S3,US & CA,Channel,Haystack,600000,200000,4/1/20,April 2021

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+
+<html lang="en" data-layout="vertical" data-sidebar="dark" data-sidebar-size="lg" data-layout-mode="dark" data-layout-width="fluid" data-layout-position="fixed" data-layout-style="default" data-topbar="dark">
+
+<head>
+
+    <title>Booking | Plume</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+    <script src="assets/js/layout.js"></script>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+    <link href="./css/common.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+            <div class="layout-width">
+                <div class="navbar-header">
+
+                    <div class="d-flex">
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="dashboard.html" class="logo logo-light">
+                                <span class="logo-lg">
+                                    <img src="img/plume-logo.png" alt="Logo">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="m-2">
+                            <button type="button" class="btn btn-dark-dash-secondary hidden" disabled>
+                                <i class="ri-settings-5-line"></i>
+                                Add Dashboard
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+
+                            <button class="btn btn-dark-dash-primary btn-sm" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Suhui C<i class="mdi mdi-chevron-down align-middle ms-1"></i>
+                            </button>
+
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <div style="margin-left:17px;">
+                                    <input type="radio" name="data_file_type" value="Stored Data" checked=""> Stored Data <br>
+                                    <input type="radio" name="data_file_type" value="Drive Data"> Drive Data
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <div class="app-menu navbar-menu">
+            <div id="scrollbar">
+
+                <button type="button" class="btn btn-sm fs-16 side-menu-icon header-item vertical-menu-btn topnav-hamburger" id="topnav-hamburger-icon">
+                    <i class="ri-menu-line remix-i"></i>
+                </button>
+
+                <div class="container-fluid">
+                    <ul class="navbar-nav" id="navbar-nav">
+
+                        <li class="menu-title"><span data-key="t-fin">FINANCE</span></li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="dashboard.html">
+                                <i class="las la-coins"></i> <span data-key="t-dashboards">Financial Overview</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="revenue.html">
+                                <i class="las la-hand-holding-usd"></i> <span data-key="t-revenue">Revenue</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link active" href="booking.html">
+                                <i class="ri-profile-line"></i> <span data-key="t-booking">Booking</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="profitability.html">
+                                <i class="ri-line-chart-fill"></i> <span data-key="t-profitability">Profitability</span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title hidden"><span data-key="t-sales">SALES</span></li>
+
+                        <li class="nav-item hidden">
+                            <a class="nav-link menu-link" href="javascript:void(0);">
+                                <i class="ri-customer-service-2-line"></i> <span data-key="t-placeholder">Placeholder</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item hidden">
+                            <a class="nav-link menu-link" href="javascript:void(0);">
+                                <i class="ri-folder-shield-line"></i> <span data-key="t-placeholder">Placeholder</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <div class="row mt-3">
+                        <div class="col-12 dashboard-head-section">
+                            <div>
+                                <h2>Booking</h2>
+                            </div>
+
+                            <div>
+                                <h5>Current Period</h5>
+                                <div class="dropdown">
+
+                                    <ul class="time-ul">
+                                        <li class="nav-item dropdown" id="myDropdown">
+
+                                            <a class="nav-link dropdown-toggle btn btn-dark-dash-primary btn-sm time-period-txt" data-bs-toggle="dropdown"></a>
+                                            <ul class="dropdown-menu time-toggle">
+
+                                                <li>
+                                                    <a class="dropdown-item show-datepicker"> Monthly </a>
+                                                    <ul class="submenu submenu-left dropdown-menu" data-id="Monthly">
+                                                        <li>
+                                                            <a class="dropdown-item" type="button">
+                                                                <div id="monthlyDatePicker"></div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item show-datepicker"> Quarterly </a>
+                                                    <ul class="submenu submenu-left dropdown-menu" data-id="Quarterly">
+                                                        <li>
+                                                            <a class="dropdown-item" type="button">
+                                                                <div id="quarterlyDatePicker"></div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item show-datepicker"> Yearly </a>
+                                                    <ul class="submenu submenu-left dropdown-menu" data-id="Yearly">
+                                                        <li>
+                                                            <a class="dropdown-item" type="button">
+                                                                <div id="yearlyDatePicker"></div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                        <div class="col-2">
+
+                            <div class="col-md-12">
+                                <div class="card card-animate">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between chart-description">
+
+                                            <div class="full-wrap head-chart-wrap">
+
+                                                <div class="full-wrap financial-title-wrap">
+                                                    <h4>
+                                                        TCV
+                                                    </h4>
+
+                                                    <i class="ri-information-line my-tooltip" data-template="tcv"></i>
+                                                    <div id="tcv" style="display: none;">
+                                                        <h3>
+                                                            TCV
+                                                        </h3>
+                                                        <p>
+                                                            Total Contract Value booked in this period.
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="full-wrap price-title-wrap">
+                                                    <h3>
+                                                        $0.0 <span>M</span>
+                                                    </h3>
+                                                </div>
+
+                                                <div class="desc-out-box-wrap">
+
+                                                    <div class="desc-tag-line">
+                                                        <p>
+                                                            -
+                                                        </p>
+                                                        <p>
+                                                            -
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="growth-ratio">
+                                                        <p>
+                                                            <span> <img src="img/up-triangle.png" alt="up"> </span>
+                                                            <small class="diffValue">0.0 %</small>
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div id="tcvLineColumn" class="sm-card-body-chart"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="card card-animate">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between chart-description">
+
+                                            <div class="full-wrap head-chart-wrap">
+
+                                                <div class="full-wrap financial-title-wrap">
+                                                    <h4>
+                                                        ACV
+                                                    </h4>
+
+                                                    <i class="ri-information-line my-tooltip" data-template="acv"></i>
+                                                    <div id="acv" style="display: none;">
+                                                        <h3>
+                                                            ACV
+                                                        </h3>
+                                                        <p>
+                                                            Annual Contract Value calculated as TCV divided by contract duration.
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="full-wrap price-title-wrap">
+                                                    <h3>
+                                                        $0.0 <span>M</span>
+                                                    </h3>
+                                                </div>
+
+                                                <div class="desc-out-box-wrap">
+
+                                                    <div class="desc-tag-line">
+
+                                                        <p>
+                                                            -
+                                                        </p>
+                                                        <p>
+                                                            -
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="growth-ratio">
+                                                        <p>
+                                                            <span> <img src="img/up-triangle.png" alt="up"> </span>
+                                                            <small class="diffValue">0.0 %</small>
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div id="acvLineColumn" class="sm-card-body-chart"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="col-6 left-side-section f-left">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card card-animate">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between chart-description">
+
+                                                            <div class="full-wrap head-chart-wrap">
+
+                                                                <div class="full-wrap chart-title-wrap">
+                                                                    <h4>
+                                                                        TCV by CSP Size
+                                                                    </h4>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div id="TCVByCSP" class="card-body-chart"></div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card card-animate">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between chart-description">
+
+                                                            <div class="full-wrap head-chart-wrap">
+
+                                                                <div class="full-wrap chart-title-wrap">
+                                                                    <h4>
+                                                                        TCV by Region
+                                                                    </h4>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div id="TCVByRegion" class="card-body-chart"></div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card card-animate">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between chart-description">
+
+                                                            <div class="full-wrap head-chart-wrap">
+
+                                                                <div class="full-wrap chart-title-wrap">
+                                                                    <h4>
+                                                                        TCV by Channel
+                                                                    </h4>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div id="TCVByChannel" class="card-body-chart"></div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card card-animate">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between chart-description">
+
+                                                            <div class="full-wrap head-chart-wrap">
+
+                                                                <div class="full-wrap chart-title-wrap">
+                                                                    <h4>
+                                                                        TCV by Product
+                                                                    </h4>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div id="TCVByProduct" class="card-body-chart"></div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-6 right-side-section f-right">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card card-animate">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between chart-description">
+
+                                                            <div class="full-wrap head-chart-wrap">
+
+                                                                <div class="full-wrap chart-title-wrap">
+                                                                    <h4>
+                                                                        ACV by CSP Size
+                                                                    </h4>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div id="ACVByCSP" class="card-body-chart"></div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card card-animate">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between chart-description">
+
+                                                            <div class="full-wrap head-chart-wrap">
+
+                                                                <div class="full-wrap chart-title-wrap">
+                                                                    <h4>
+                                                                        ACV by CSP Region
+                                                                    </h4>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div id="ACVByCSPRegion" class="card-body-chart"></div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card card-animate">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between chart-description">
+
+                                                            <div class="full-wrap head-chart-wrap">
+
+                                                                <div class="full-wrap chart-title-wrap">
+                                                                    <h4>
+                                                                        ACV by Channel
+                                                                    </h4>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div id="ACVByChannel" class="card-body-chart"></div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="col-md-12">
+                                                    <div class="card card-animate">
+                                                        <div class="card-body">
+                                                            <div class="d-flex justify-content-between chart-description">
+
+                                                                <div class="full-wrap head-chart-wrap">
+
+                                                                    <div class="full-wrap chart-title-wrap">
+                                                                        <h4>
+                                                                            ACV by Product
+                                                                        </h4>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div id="ACVByProduct" class="card-body-chart"></div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        &#169;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> Plume.
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="text-sm-end d-none d-sm-block">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://rawgit.com/highcharts/rounded-corners/master/rounded-corners.js"></script>
+    <script src="https://code.highcharts.com/themes/dark-unica.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+
+    <!-- Development -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.7/themes/translucent.min.css" integrity="sha512-MkXwkRGjkxAMeA0Kma3nhRs2CxojMPMv5kgP+y9OcIQkXOTPGyxmjPPddHPov59evYXjcC5B5hM4yUQ5n49Yog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="./js/chart-utility.js"></script>
+    <script src="./js/booking.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</body>
+
+</html>
