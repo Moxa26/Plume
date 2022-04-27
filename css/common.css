@@ -37,6 +37,22 @@
 	display:none;
 }
 
+.form-group{
+	margin-bottom: 20px!important;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #6269ff;
+    border-color: #6269ff;
+}
+
+.btn-info:hover {
+    color: #fff;
+    background-color: gray;
+    border-color: gray;
+}
+
 #loader {
 	position: absolute;
 	left: 50%;
@@ -83,8 +99,10 @@
 }
 
 .btn-dark-dash-secondary i {
-    margin-right: 10px;
-    float: left;
+    font-size: 18px;
+}
+.btn-dark-dash-secondary:hover {
+    color:white;
 }
 
 .dashboard-head-section {
@@ -141,8 +159,9 @@ body {
 }
 
 [data-layout=vertical][data-sidebar-size=lg] .logo span.logo-lg img {
-    width: 200px;
+    width: 180px;
     height: auto;
+    margin-left: 12px;
 }
 
 [data-layout=vertical] .horizontal-logo {

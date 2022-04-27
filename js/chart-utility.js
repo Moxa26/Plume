@@ -177,6 +177,7 @@ $('input[type=radio][name=data_file_type]').change(async function () {
     })
 });
 
+
 //#region CsvData
 /*============================================================
     This function is use for read data from the CSV file
@@ -217,16 +218,25 @@ async function get_doc(access_token, pageToken = undefined, q = undefined,) {
                 })
                 if (driveSheets.length == 0) {
                     toastr.error("No Permission");
+                    $("input[type=radio][name=data_file_type][value='Stored Data']").prop('checked', true);
+                    localStorage.setItem("data_file_type", "Stored Data");
+                    await getFileJsonCSVData();
                 } else {
                     await getFilesFromDrive(driveSheets, access_token);
                 }
             }
             else {
                 toastr.error("No Permission");
+                $("input[type=radio][name=data_file_type][value='Stored Data']").prop('checked', true);
+                localStorage.setItem("data_file_type", "Stored Data");
+                await getFileJsonCSVData();
             }
         },
-        error: function (err) {
+        error: async function (err) {
             toastr.error("No Permission");
+            $("input[type=radio][name=data_file_type][value='Stored Data']").prop('checked', true);
+            localStorage.setItem("data_file_type", "Stored Data");
+            await getFileJsonCSVData();
         }
     })
 }
@@ -2282,7 +2292,7 @@ function getDataCumulativeCount(data, key, valueKey) {
     //    return monthsData.find(d => d === (item[period]).toString())
     //});
     var list = sortData(data, key);
-    var currentPeriodList = data.map(x => x[period]).filter((item, i, ar) => ar.indexOf(item) === i);
+    var currentPeriodList = data.map(x => x[period].toString()).filter((item, i, ar) => ar.indexOf(item) === i);
 
     currentPeriodList = currentPeriodList.concat(monthsData);
     currentPeriodList = currentPeriodList.filter((item, pos) => currentPeriodList.indexOf(item) === pos);
