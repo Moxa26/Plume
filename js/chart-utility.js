@@ -5,7 +5,7 @@ var currentPage = "Dashboard";
 const monthList = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const quarterList = ["Q1", "Q2", "Q3", "Q4"];
 const CSPSizeList = ["S1", "S2", "S3", "M4", "L5"];
-const DriveFolderId = "1A0XCHghH23jC7rhE57Wi4fCplcRkn3i-";
+const DriveFolderId = "1aTIcKIVOGLS5QxySkUqh0K3CdlMh0p7V";
 
 const sheetsName = [
     { id: "Sample Data Source  - Summary Sheet (Month Wise).csv", name: "summaryMonthJsonData" },
@@ -112,7 +112,7 @@ var chartUtility = {
         showDatePicker();
         currentPeriodDropdown();
         cardTitleTooltip();
-        var fileType = localStorage.getItem("data_file_type") ?? "Stored Data";
+        var fileType = localStorage.getItem("data_file_type") ?? "Drive Data";
         $("input[type=radio][name=data_file_type][value='" + fileType + "']").prop('checked', true);
         if (fileType == "Stored Data") {
             await getFileJsonCSVData();
@@ -125,6 +125,14 @@ var chartUtility = {
                 thousandsSep: ','
             }
         });
+        //Windows
+        if (navigator.appVersion.indexOf("Win") != -1) {
+            $(".financial-title-wrap").addClass("windowTitle")
+        }
+        //Mac
+        else if (navigator.appVersion.indexOf("Mac") != -1) {
+            $(".financial-title-wrap").addClass("macTitle")
+        }
     }
 }
 $('input[type=radio][name=data_file_type]').change(async function () {
@@ -286,8 +294,8 @@ function initGoogleAuth(clientId = $("meta[name='google-signin-client_id']").att
     const scopes = [
         'openid',
         'https://www.googleapis.com/auth/userinfo.email',
-        'https://www.googleapis.com/auth/drive',
-        'https://www.googleapis.com/auth/documents'
+        'https://www.googleapis.com/auth/drive.readonly',
+        'https://www.googleapis.com/auth/documents.readonly'
     ]
     const scope = scopes.join(' ')
 
@@ -2439,7 +2447,7 @@ function getLineColumnSeriesData(data, columnKey, lineKey) {
         },
         "categories": list.map(x => x.Time)
     });
-    if (period.toLowerCase() != "year") {
+    //if (period.toLowerCase() != "year") {
         var lineList = getData(data, true);
         $(lineList).each(function (i, element) {
             //columnData.push(element[columnKey]);
@@ -2456,7 +2464,7 @@ function getLineColumnSeriesData(data, columnKey, lineKey) {
             "lineWidth": 4,
             "categories": list.map(x => x.Time)
         })
-    }
+    //}
     return lineColumnData;
 }
 
