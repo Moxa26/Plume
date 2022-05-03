@@ -1006,9 +1006,31 @@ function drawLineColumnChart(chartId, lineColumnSeriesData) {
             visible: false,
             categories: JSON.parse(localStorage.getItem("seriesData"))
         },
-        yAxis: {
+        //yAxis: {
+        //    visible: false
+        //},
+        yAxis: [{ // Primary yAxis trendline
+            labels: {
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: '',
+            },
             visible: false
-        },
+        }, { // Secondary yAxis column
+            title: {
+                text: '',
+            },
+            labels: {
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            opposite: true,
+            visible: false
+        }],
         plotOptions: {
             series: {
                 marker: {
@@ -1038,31 +1060,32 @@ function drawLineColumnChart(chartId, lineColumnSeriesData) {
                     currentPeriod = splitValue[0] + " " + (splitValue[1]).toString();
                     previousPeriod = splitValue[0] + " " + (splitValue[1] - 1).toString();
                     currentValue = this.points[0].y;
-                    previousValue = this.points[1].y;
+                    previousValue = chartData[1].previousYearData[this.points[1].point.x];
                 } else if (this.points[0].x.includes("Q")) {
                     splitValue = this.points[0].x.split(" ");
                     currentPeriod = splitValue[0] + " " + (splitValue[1]).toString();
                     previousPeriod = splitValue[0] + " " + (splitValue[1] - 1).toString();
                     currentValue = this.points[0].y;
-                    previousValue = this.points[1].y;
+                    previousValue = chartData[1].previousYearData[this.points[1].point.x];
                 } else {
                     splitValue = this.points[0].x;
                     currentPeriod = splitValue.toString();
                     previousPeriod = (splitValue - 1).toString();
                     currentValue = this.points[0].y;
-                    let indexOfPreviousValue = chartData.map(x => x.categories)[0].indexOf(Number(previousPeriod));
-                    if (indexOfPreviousValue > -1) {
-                        previousValue = Number(chartData.map(x => x.data)[0][indexOfPreviousValue]);
-                    } else {
-                        previousValue = 0;
-                    }
+                    //let indexOfPreviousValue = chartData.map(x => x.categories)[0].indexOf(Number(previousPeriod));
+                    //if (indexOfPreviousValue > -1) {
+                    //    previousValue = Number(chartData.map(x => x.data)[0][indexOfPreviousValue]);
+                    //} else {
+                    //    previousValue = 0;
+                    //}
+                    previousValue = chartData[1].previousYearData[this.points[1].point.x];
                 }
                 if (title == "Net Retention" || title == "Gross Margin") {
                     currentTooltip = '<svg width="10" height="10" style="color:#44bdb8">&#9679;</svg> <span style="color:#44bdb8">' + currentPeriod + '</span> : ' + currentValue.toLocaleString('en-US') + '<span>%</span><br/>';
                     previousTooltip = '<svg width="10" height="10" style="color:#6269FF">&#9679;</svg> <span style="color:#6269FF">' + previousPeriod + '</span> : ' + previousValue.toLocaleString('en-US') + '<span>%</span><br/>';
                 } else {
                     currentTooltip = '<svg width="10" height="10" style="color:#44bdb8">&#9679;</svg> <span style="color:#44bdb8">' + currentPeriod + '</span> : <span>$</span>' + currentValue.toLocaleString('en-US') + '<br/>';
-                    previousTooltip = '<svg width="10" height="10" style="color:#6269FF">&#9679;</svg> <span style="color:#6269FF">' + previousPeriod + '</span> : <span>$</span>' + previousValue.toLocaleString('en-US') + '<br/>';
+                    previousTooltip = '<svg width="10" height="10" style="color:{series.color}">&#9679;</svg> <span style="color:{series.color}">' + previousPeriod + '</span> : <span>$</span>' + previousValue.toLocaleString('en-US') + '<br/>';
                 }
                 var comparisonTitle = "Comparison";
                 var caluclatePeriodDiff = parseFloat(currentValue - previousValue);
@@ -1070,7 +1093,7 @@ function drawLineColumnChart(chartId, lineColumnSeriesData) {
                 if (!$.isNumeric(preiodPercentage)) {
                     preiodPercentage = 0;
                 }
-                var comparisonTooltip = '<svg width="10" height="10" style="color:{series.color}">&#9679;</svg> <span style="color:{series.color}">' + comparisonTitle + '</span> : ' + preiodPercentage + '<span>%</span><br/>';
+                var comparisonTooltip = '<svg width="10" height="10" style="color:#6269FF">&#9679;</svg> <span style="color:#6269FF">' + comparisonTitle + '</span> : ' + preiodPercentage + '<span>%</span><br/>';
                 var tooltip = title + "<br>" + currentTooltip + previousTooltip + comparisonTooltip;
                 return tooltip;
             },
@@ -1092,7 +1115,7 @@ function drawLineColumnChart(chartId, lineColumnSeriesData) {
         },
         series: lineColumnSeriesData
     });
-    var startValue = period.toLowerCase() == "year" ? lineColumnSeriesData[0].data[lineColumnSeriesData[0].data.length - 2] : lineColumnSeriesData[1].data[lineColumnSeriesData[1].data.length - 1]
+    var startValue = period.toLowerCase() == "year" ? lineColumnSeriesData[0].data[lineColumnSeriesData[0].data.length - 2] : lineColumnSeriesData[1].previousYearData[lineColumnSeriesData[1].data.length - 1]
     var lastValue = lineColumnSeriesData[0].data[lineColumnSeriesData[0].data.length - 1];
     lastValue = lastValue ?? 0;
     var caluclatePeriodDiff = parseFloat(lastValue - startValue);
@@ -2404,6 +2427,8 @@ function getLineColumnSeriesData(data, columnKey, lineKey) {
     var lineColumnData = [];
     var columnData = [];
     var lineData = [];
+    var trendLineData = [];
+    var compareData = [];
     $(list).each(function (i, element) {
         columnData.push(element[columnKey]);
         //lineData.push(element[lineKey]);
@@ -2412,17 +2437,10 @@ function getLineColumnSeriesData(data, columnKey, lineKey) {
     columnData = columnData.map(x => parseFloat(x));
     lineData = lineData.map(x => parseFloat(x));
     var newLineData = [];
-    // lineData.forEach(function (val, i) {
-    //     if (i > 0) {
-    //         newLineData.push(columnData[i - 1]);
-    //     } else {
-    //         newLineData.push(0);
-    //     }
-    // })
-    // lineData = newLineData;
     lineColumnData.push({
         'name': columnKey,
         'data': columnData,
+        'yAxis': 1,
         'type': 'column',
         "tooltip": {
             // "valueSuffix": " M"
@@ -2448,22 +2466,46 @@ function getLineColumnSeriesData(data, columnKey, lineKey) {
         "categories": list.map(x => x.Time)
     });
     //if (period.toLowerCase() != "year") {
-        var lineList = getData(data, true);
-        $(lineList).each(function (i, element) {
-            //columnData.push(element[columnKey]);
-            lineData.push(element[lineKey]);
-        })
-        lineColumnData.push({
-            'name': lineKey,
-            'data': lineData,
-            'type': 'spline',
-            "tooltip": {
-                // "valueSuffix": " %"
-            },
-            "color": "#6269FF",
-            "lineWidth": 4,
-            "categories": list.map(x => x.Time)
-        })
+    var lineList = getData(data, true);
+    $(lineList).each(function (i, element) {
+        //columnData.push(element[columnKey]);
+        lineData.push(element[lineKey]);
+    })
+    trendLineData = columnData.map(function (v, i) {
+        var caluclatePeriodDiff = parseFloat(v - lineData[i]);
+        var preiodPercentage = parseFloat(parseFloat(caluclatePeriodDiff / lineData[i]) * 100).toFixed(1);
+        if (!$.isNumeric(preiodPercentage)) {
+            preiodPercentage = 0;
+        }
+        return parseFloat(preiodPercentage);
+    });
+    //var minValue = Math.min.apply(Math, trendLineData);
+    //trendLineData.forEach(function (element, i) {
+    //    if (element == minValue) {
+    //        element = 0;
+    //    }
+    //    else {
+    //        element = element + minValue;
+    //    }
+    //    compareData.push(element);
+    //})
+
+    console.log("trendLine: " + trendLineData);
+    //console.log("compare: " + compareData);
+
+    lineColumnData.push({
+        'name': "TrendLine",
+        'data': trendLineData,
+        //'yAxis': 0,
+        'type': 'spline',
+        "tooltip": {
+            // "valueSuffix": " %"
+        },
+        "color": "#6269FF",
+        "lineWidth": 4,
+        "categories": list.map(x => x.Time),
+        "previousYearData": lineData.length > 0 ? lineData : trendLineData
+    })
     //}
     return lineColumnData;
 }
